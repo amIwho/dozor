@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Game:</b>
+  <%= @task_order.game_id %>
+</p>
+
+<p>
+  <b>Team:</b>
+  <%= @task_order.team_id %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @task_order.task_id %>
+</p>
+
+<p>
+  <b>Order n:</b>
+  <%= @task_order.order_n %>
+</p>
+
+<p>
+  <b>Solved:</b>
+  <%= @task_order.solved %>
+</p>
+
+<p>
+  <b>Dropped:</b>
+  <%= @task_order.dropped %>
+</p>
+
+<p>
+  <b>Time start:</b>
+  <%= @task_order.time_start %>
+</p>
+
+<p>
+  <b>Time hint1:</b>
+  <%= @task_order.time_hint1 %>
+</p>
+
+<p>
+  <b>Time hint2:</b>
+  <%= @task_order.time_hint2 %>
+</p>
+
+<p>
+  <b>Solve time:</b>
+  <%= @task_order.solve_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_order_path(@task_order) %> |
+<%= link_to 'Back', task_orders_path %>

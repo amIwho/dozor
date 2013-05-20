@@ -1,0 +1,5 @@
+<%= form_tag("/rgame/post_answer", :method => "post") do %>
+<%= label_tag(:code, "Код:") %>
+<%= text_field_tag(:code) %>
+<%= submit_tag("Отправить!")%>
+<% end %>

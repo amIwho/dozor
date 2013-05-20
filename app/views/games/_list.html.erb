@@ -1,0 +1,15 @@
+<% games.each do |game| %>
+  <p>
+    <strong><%= link_to game.name, game %></strong>
+    <em><%= link_to "(просмотреть)", game %></em>
+    <% if !!session[:team_id] and !!session[:admin] %>
+        <em><%= link_to "(редактировать)", edit_game_path(game) %></em>
+        <em><%= link_to "(прямой эфир)", "/logs/livechannel/#{game.id}" if game.started? %></em>
+        <em><%= link_to "(лог ответов)", "/logs/full/#{game.id}" if game.started? %></em>
+        <b><%= link_to "ЗАВЕРШИТЬ ИГРУ", "/games/end_game/#{game.id}" if (game.started? and !game.finished?) %></b>
+        <em><%= "Вы завершили игру" if (game.started? and game.finished?) %></em>
+		<em><%= link_to "Использовать игру снова", "/games/reuse_game/#{game.id}" if (game.started? and game.finished?) %></em>
+		
+    <% end %>
+  </p>
+<% end %>

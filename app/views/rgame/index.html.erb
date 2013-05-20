@@ -1,0 +1,78 @@
+﻿
+<p>Вы вошли как <b><%= @current_team.name %>.</b>
+<%= link_to 'Выйти', logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<h2>Игра <%= @current_game.name %></h2>
+
+<div>
+
+<% if @current_game.started? and !@it_was_last_task %>
+	<br />
+	<div id="task">
+	
+		<h2>Задание <%= @current_task.name  %></h2>
+		<%= raw @current_task.fulltext %>
+		
+		<% unless @it_is_time_to_hint1 or @it_is_time_to_hint2 %>
+				<h2>Время до подсказки: </h2>
+				<div id="countdown_time"> </div>
+			<script>
+				var firstHint = new Date(); 
+				firstHint = new Date(<%= @hint1_time.to_i*1000 %>); 
+				serverTime = new Date(<%= Time.now.to_i*1000 %>);
+				$('#countdown_time').countdown({until: firstHint, serverSync: serverTime, onExpiry: function() { setTimeout(location.reload(), 2000); }}); 
+			</script>
+
+		<% end %>
+		
+		<% if @it_is_time_to_hint1 %>
+			<h3>Подсказка №1:</h3>
+				<%= raw @current_task.hint2 %>
+				<% if ! @it_is_time_to_hint2 %>
+					<h2>Время до второй подсказки: </h2>
+					<div id="countdown_time"> </div>
+					<script>
+						var secondHint = new Date();
+						secondHint = new Date(<%= @hint2_time.to_i*1000 %>); 
+						serverTime = new Date(<%= Time.now.to_i*1000 %>);
+						$('#countdown_time').countdown({until: secondHint, serverSync: serverTime, onExpiry: function() { setTimeout(location.reload(), 2000); }}); 
+					</script>
+				<% end %>
+		<% end %>
+		
+		<% if @it_is_time_to_hint2 %>
+			<h3>Подсказка №2:</h3>
+				<%= raw @current_task.hint2 %>
+				<h2>Время до слива: </h2>
+				<div id="countdown_time"> </div>
+				<script>
+					var endTask = new Date();
+					endTask = new Date(<%= @leak_time.to_i*1000 %>); 
+					serverTime = new Date(<%= Time.now.to_i*1000 %>);
+					$('#countdown_time').countdown({until: endTask, serverSync: serverTime, onExpiry: function() { setTimeout(location.reload(), 2000); }}); 
+				</script>
+		<% end %>
+	
+		<div class="form">
+			<br /><br /><br />
+			<%= render 'form' %><br />
+		</div>
+	</div>
+
+	<% elsif @it_was_last_task %>
+	<h1>Вы прошли игру</h1>
+
+<% else %>
+		<h2>До игры осталось: </h2>
+		<div id="countdown_time"></div>
+		<script>
+			var newGame = new Date();
+			newGame = new Date(<%= @current_game.date.to_i*1000 %>);
+			serverTime = new Date(<%= Time.now.to_i*1000 %>);
+			$('#countdown_time').countdown({until: newGame, serverSync: serverTime, onExpiry: function() { setTimeout(location.reload(), 2000); }});
+		</script>
+<% end %>
+</div>
+<br />
+<p>Примечание - таймер зависит от часов на вашем устройстве, пожалуйста, сверьте ваши часы и часовой пояс с часами ниже</p>
+<%= render 'time' %>
+

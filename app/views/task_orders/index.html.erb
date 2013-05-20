@@ -1,0 +1,30 @@
+﻿<h1>Игра <%= @current_game.name %></h1>
+
+<%= link_to 'Изменить порядок заданий', change_order_task_orders_path %>
+
+<% @teams.each do |t| %>
+<h2><%= t.name %></h2>
+<table>
+  <tr>
+    <th>Задание</th>
+    <th>Порядковый номер</th>
+    <th></th>
+  </tr>
+
+<% @task_orders.where(team_id: t.id).order(:order_n).each do |task_order| %>
+  <tr>
+    <td><%= Task.find(task_order.task_id).name %></td>
+    <td><%= task_order.order_n %></td>
+    <td>
+	<%= link_to 'Show', task_order %><br />
+	<%= link_to 'Edit', edit_task_order_path(task_order) %><br />
+	<%= link_to 'Destroy', task_order, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</td>
+  </tr>
+<% end %>
+</table>
+<% end %>
+<br />
+
+
+<%= link_to 'New Task order', new_task_order_path %>

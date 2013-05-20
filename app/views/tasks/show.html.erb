@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @task.name %>
+</p>
+
+<p>
+  <b>Fulltext:</b>
+  <%= raw(@task.fulltext) %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= image_tag @task.image_url %>
+</p>
+
+<p>
+  <b>Game:</b>
+  <%= @task.game_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @task.location %>
+</p>
+
+<p>
+  <b>Hint1:</b>
+  <%= raw(@task.hint1) %>
+</p>
+
+<p>
+  <b>Hint2:</b>
+  <%= raw(@task.hint2) %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= raw(@task.comments) %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

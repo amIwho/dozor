@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  game_id: 1
+  team_id: 1
+  current_task_id: 1
+  finished_at: 2013-04-30 14:22:30
+  current_task_entered_at: 2013-04-30 14:22:30
+  answered_questions: MyString
+
+two:
+  game_id: 1
+  team_id: 1
+  current_task_id: 1
+  finished_at: 2013-04-30 14:22:30
+  current_task_entered_at: 2013-04-30 14:22:30
+  answered_questions: MyString

@@ -1,0 +1,29 @@
+<%= form_for(@trye) do |f| %>
+  <% if @trye.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trye.errors.count, "error") %> prohibited this trye from being saved:</h2>
+
+      <ul>
+      <% @trye.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team_id %><br />
+    <%= f.number_field :team_id %>
+  </div>
+  <div class="field">
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :match %><br />
+    <%= f.check_box :match %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

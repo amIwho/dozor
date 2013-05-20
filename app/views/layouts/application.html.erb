@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Dozor</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	
+<% if session[:admin] %>
+	<nav class="menu_main"
+		<ul>
+			<li><%= link_to 'Игры', games_path %></li>
+			<li><%= link_to 'Команды', teams_path %></li>
+			<li><%= link_to 'Задания', tasks_path %></li>
+			<li><%= link_to 'Коды', codes_path %></li>
+			<li><%= link_to 'Порядок заданий', task_orders_path %></li>
+		</ul>
+	</nav>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

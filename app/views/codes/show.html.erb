@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @code.name %>
+</p>
+
+<p>
+  <b>Dif:</b>
+  <%= @code.dif %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @code.task_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_code_path(@code) %> |
+<%= link_to 'Back', codes_path %>

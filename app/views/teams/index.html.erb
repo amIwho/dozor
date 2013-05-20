@@ -1,0 +1,33 @@
+<h1>Listing teams</h1>
+
+<table>
+  <tr>
+	<th>Админ?</th>
+    <th>Название</th>
+    <th>Капитан</th>
+    <th>Телефон</th>
+    <th>Будет ли учавствовать</th>
+    <th>Login</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @teams.each do |team| %>
+  <tr>
+    <td><%= team.is_admin %></td>
+    <td><%= team.name %></td>
+    <td><%= team.cap %></td>
+    <td><%= team.phone %></td>
+    <td><%= team.confirm %></td>
+    <td><%= team.login %></td>
+    <td><%= link_to 'Show', team %></td>
+    <td><%= link_to 'Edit', edit_team_path(team) %></td>
+    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Team', new_team_path %>

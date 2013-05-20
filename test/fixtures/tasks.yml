@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  fulltext: MyText
+  image_url: MyString
+  game_id: 1
+  location: MyString
+  hint1: MyText
+  hint2: MyText
+  comments: MyText
+
+two:
+  name: MyString
+  fulltext: MyText
+  image_url: MyString
+  game_id: 1
+  location: MyString
+  hint1: MyText
+  hint2: MyText
+  comments: MyText

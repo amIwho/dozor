@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @team.name %>
+</p>
+
+<p>
+  <b>Cap:</b>
+  <%= @team.cap %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @team.phone %>
+</p>
+
+<p>
+  <b>Confirm:</b>
+  <%= @team.confirm %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%= @team.login %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @team.password %>
+</p>
+
+<p>
+  <b>Password confirmation:</b>
+  <%= @team.password_confirmation %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

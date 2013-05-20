@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  cap: MyString
+  phone: MyString
+  confirm: false
+  login: MyString
+  password_digest: MyString
+
+two:
+  name: MyString
+  cap: MyString
+  phone: MyString
+  confirm: false
+  login: MyString
+  password_digest: MyString
