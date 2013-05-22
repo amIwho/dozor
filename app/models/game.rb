@@ -16,7 +16,7 @@
 #  finished_at :datetime
 #
 
-﻿class Game < ActiveRecord::Base
+class Game < ActiveRecord::Base
   attr_accessible :area, :author, :coments, :date, :equipment, :legend, :name, :current, :finished_at
 
   has_many :tasks
@@ -25,9 +25,9 @@
   has_many :task_orders
   has_many :rgames
   
-    validates :name, uniqueness: { message: "Такое название уже есть" }, presence: { message: "Вы не ввели название" }
+  validates :name, uniqueness: { message: "Такое название уже есть" }, presence: { message: "Вы не ввели название" }
 	validates :author, presence: { message: "Вы не ввели автора" }
-    validates :legend, presence: { message: "Как же без легенды-то?" }
+  validates :legend, presence: { message: "Как же без легенды-то?" }
 
   validate :game_starts_in_the_future
 
@@ -43,7 +43,7 @@
   end
 
   def finished?
-    !self.finished_at.nil?
+    self.finished_at.nil? ? false : Time.now > self.finished_at
   end
 
 protected

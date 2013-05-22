@@ -12,6 +12,7 @@
 <% if session[:admin] %>
 	<nav class="menu_main"
 		<ul>
+			<li><%= link_to 'Главная', root_path %></li>
 			<li><%= link_to 'Игры', games_path %></li>
 			<li><%= link_to 'Команды', teams_path %></li>
 			<li><%= link_to 'Задания', tasks_path %></li>

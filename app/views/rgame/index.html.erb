@@ -1,11 +1,14 @@
 ﻿
 <p>Вы вошли как <b><%= @current_team.name %>.</b>
 <%= link_to 'Выйти', logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<h2>Игра <%= @current_game.name %></h2>
+<h2>Игра <%= @current_game.name %>
+	<%= ' закончена' if @current_game.finished? %>
+
+</h2>
 
 <div>
 
-<% if @current_game.started? and !@it_was_last_task %>
+<% if @current_game.started? and !@current_game.finished? and !@it_was_last_task %>
 	<br />
 	<div id="task">
 	
@@ -19,7 +22,7 @@
 				var firstHint = new Date(); 
 				firstHint = new Date(<%= @hint1_time.to_i*1000 %>); 
 				serverTime = new Date(<%= Time.now.to_i*1000 %>);
-				$('#countdown_time').countdown({until: firstHint, serverSync: serverTime, onExpiry: function() { setTimeout(location.reload(), 2000); }}); 
+				$('#countdown_time').countdown({until: firstHint, serverSync: serverTime, onExpiry: function() { location.reload(); }}); 
 			</script>
 
 		<% end %>
@@ -34,7 +37,7 @@
 						var secondHint = new Date();
 						secondHint = new Date(<%= @hint2_time.to_i*1000 %>); 
 						serverTime = new Date(<%= Time.now.to_i*1000 %>);
-						$('#countdown_time').countdown({until: secondHint, serverSync: serverTime, onExpiry: function() { setTimeout(location.reload(), 2000); }}); 
+						$('#countdown_time').countdown({until: secondHint, serverSync: serverTime, onExpiry: function() { location.reload(); }}); 
 					</script>
 				<% end %>
 		<% end %>
@@ -48,9 +51,10 @@
 					var endTask = new Date();
 					endTask = new Date(<%= @leak_time.to_i*1000 %>); 
 					serverTime = new Date(<%= Time.now.to_i*1000 %>);
-					$('#countdown_time').countdown({until: endTask, serverSync: serverTime, onExpiry: function() { setTimeout(location.reload(), 2000); }}); 
+					$('#countdown_time').countdown({until: endTask, serverSync: serverTime, onExpiry: function() { location.reload(); }}); 
 				</script>
 		<% end %>
+		
 	
 		<div class="form">
 			<br /><br /><br />
@@ -62,13 +66,13 @@
 	<h1>Вы прошли игру</h1>
 
 <% else %>
-		<h2>До игры осталось: </h2>
+		<h2>До следующей игры осталось: </h2>
 		<div id="countdown_time"></div>
 		<script>
 			var newGame = new Date();
 			newGame = new Date(<%= @current_game.date.to_i*1000 %>);
 			serverTime = new Date(<%= Time.now.to_i*1000 %>);
-			$('#countdown_time').countdown({until: newGame, serverSync: serverTime, onExpiry: function() { setTimeout(location.reload(), 2000); }});
+			$('#countdown_time').countdown({until: newGame, serverSync: serverTime, onExpiry: function() { location.reload(); }});
 		</script>
 <% end %>
 </div>
