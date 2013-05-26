@@ -43,27 +43,33 @@
   
   def index
 		@hint1_time = @rgame.current_task_entered_at + 1.minutes
-		@it_is_time_to_hint1 = @hint1_time < Time.now
+		@it_is_time_to_hint1 = @hint1_time < Time.now + 1.second
 		@hint2_time = @rgame.current_task_entered_at + 2.minutes
-		@it_is_time_to_hint2 = @hint2_time < Time.now
+		@it_is_time_to_hint2 = @hint2_time < Time.now + 1.second
     @leak_time = @rgame.current_task_entered_at + 3.minutes
-		@it_is_time_to_leak = @leak_time < Time.now
+		@it_is_time_to_leak = @leak_time < Time.now + 1.second
     if @it_is_time_to_leak
       pass_level! 
-      redirect_to root_path
+      redirect_to root_path, alert: "Вы слили задание!"
     end
   end
 
   def post_answer
     unless @current_game.finished?
       @code = params[:code].strip #если пробелы
-      @answer_was_correct = check_answer!(@code)
+      if check_answer!(@code)
+        redirect_to root_path, notice: "Код верен!"
+      else
+        redirect_to root_path, alert: "Код неверен!"
+      end
+
 	  end
   end
 
    def check_answer!(answer)
-    answer.strip!
+    answer.upcase!
     @current_task = Task.find(@rgame.current_task_id)
+    session[:info] = answer
     if unanswered(@current_task).include?(answer)
 		  @rgame.answered_questions << answer
 		  @rgame.save!
@@ -76,8 +82,6 @@
   end
   
   def unanswered(task)
-    session[:codes] = task.codes.pluck(:name)
-    session[:answq] = @rgame.answered_questions
 	  (task.codes.pluck(:name) - @rgame.answered_questions).to_a
   end
   
