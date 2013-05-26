@@ -42,6 +42,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="execjs" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="hirb" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -79,6 +85,12 @@
     <requirement>
       <requirement>
         <dependency name="sqlite3" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="therubyracer" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -135,20 +147,22 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] execjs (v1.4.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/execjs-1.4.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-mocks (v2.13.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rspec-mocks-2.13.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] hirb (v0.7.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/hirb-0.7.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] wirble (v0.1.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/wirble-0.1.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] awesome_print (v1.1.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/awesome_print-1.1.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] diff-lcs (v1.2.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/diff-lcs-1.2.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-test (v0.6.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rack-test-0.6.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-cache (v1.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rack-cache-1.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] tzinfo (v0.3.37, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/tzinfo-0.3.37)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.4.5, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.4.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rdoc (v3.12.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rdoc-3.12.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] coffee-script-source (v1.6.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/coffee-script-source-1.6.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rdoc (v3.12.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rdoc-3.12.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v3.0.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/arel-3.0.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] builder (v3.0.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/builder-3.0.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.5.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/mail-2.5.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] erubis (v2.7.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/erubis-2.7.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] json (v1.8.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/json-1.8.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-ssl (v1.3.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rack-ssl-1.3.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v10.0.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0@global/gems/rake-10.0.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v10.0.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rake-10.0.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] journey (v1.0.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/journey-1.0.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] treetop (v1.4.12, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/treetop-1.4.12)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] hike (v1.2.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/hike-1.2.2)" level="application" />
@@ -156,8 +170,6 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] climate_control (v0.0.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/climate_control-0.0.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] sprockets (v2.2.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/sprockets-2.2.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] polyglot (v0.3.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/polyglot-0.3.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] wirble (v0.1.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/wirble-0.1.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] awesome_print (v1.1.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/awesome_print-1.1.0)" level="application" />
   </component>
 </module>
 
