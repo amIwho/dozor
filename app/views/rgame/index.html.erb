@@ -1,4 +1,4 @@
-﻿   <%= @tasks_for_team.all %>
+﻿
 <p>Вы вошли как <b><%= @current_team.name %>.</b>
 <%= link_to 'Выйти', logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 <h2>Игра <%= @current_game.name %>
