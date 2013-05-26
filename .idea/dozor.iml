@@ -170,6 +170,9 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] climate_control (v0.0.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/climate_control-0.0.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] sprockets (v2.2.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/sprockets-2.2.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] polyglot (v0.3.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/polyglot-0.3.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] therubyracer (v0.11.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/therubyracer-0.11.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] ref (v1.0.5, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/ref-1.0.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] libv8 (v3.11.8.17, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/libv8-3.11.8.17-x86_64-darwin-12)" level="application" />
   </component>
 </module>
 
