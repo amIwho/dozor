@@ -1,14 +1,21 @@
-﻿
-<p>Вы вошли как <b><%= @current_team.name %>.</b>
+﻿<p>Вы вошли как команда <b><%= @current_team.name %>.</b>
 <%= link_to 'Выйти', logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<h2>Игра <%= @current_game.name %>
-	<%= ' закончена' if @current_game.finished? %>
+
+
+<% if @current_game.present? %>
+<% if @team_finished %>
+<h3>Ваша команда прошла все уровни</h3>
+<% end %>
+
+<h2>Игра <strong><%= @current_game.name %></strong>
+	<%= ' закончена' if @current_game.finished? or @team_finished %>
 
 </h2>
 
+
 <div>
 
-<% if @current_game.started? and !@current_game.finished? and !@it_was_last_task %>
+<% if @current_game.started? and !@current_game.finished? and !@team_finished %>
 	<br />
 	<div id="task">
 	
@@ -76,6 +83,8 @@
 		</script>
 <% end %>
 </div>
+
+<% end %>
 <br />
 <p>Примечание - таймер зависит от часов на вашем устройстве, пожалуйста, сверьте ваши часы и часовой пояс с часами ниже</p>
 <%= render 'time' %>

@@ -1,15 +1,22 @@
 <% games.each do |game| %>
   <p>
-    <strong><%= link_to game.name, game %></strong>
+    <strong><%= game.name %></strong>
     <em><%= link_to "(просмотреть)", game %></em>
+    <% if game.current == 1 %>
+		&#10004;  Это текущая игра.
+	<% end %>
     <% if !!session[:team_id] and !!session[:admin] %>
         <em><%= link_to "(редактировать)", edit_game_path(game) %></em>
-        <em><%= link_to "(прямой эфир)", "/logs/livechannel/#{game.id}" if game.started? %></em>
-        <em><%= link_to "(лог ответов)", "/logs/full/#{game.id}" if game.started? %></em>
         <b><%= link_to "ЗАВЕРШИТЬ ИГРУ", "/games/end_game/#{game.id}" if (game.started? and !game.finished?) %></b>
-        <em><%= "Вы завершили игру" if (game.started? and game.finished?) %></em>
 		<em><%= link_to "Использовать игру снова", "/games/reuse_game/#{game.id}" if (game.started? and game.finished?) %></em>
-		
-    <% end %>
+		<em><%= link_to "Отправить в архив", "/games/archivate/#{game.id}" %></em>
+        <h3>Задания:</h3>
+        <ul>
+            <% game.tasks.map {|t| %><li><%= link_to t.name, t %>&nbsp;<% t.codes.map { |c| %><%= c.name %>(<%= c.dif %>)<% }%></li><% } %>
+        </ul>
+    <%= link_to 'Show', game %><br />
+    <%= link_to 'Edit', edit_game_path(game) %><br />
+    <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
   </p>
 <% end %>

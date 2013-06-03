@@ -246,3 +246,23 @@ Processing by TasksController#update as HTML
 Redirected to http://test.host/tasks/980190962
 Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
   [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (38.2ms)[0m  [1mbegin transaction[0m
+Processing by RgameController#index as HTML
+Completed 500 Internal Server Error in 16ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Creating scope :finished. Overwriting existing method Rgame.finished.
+Creating scope :finished_before. Overwriting existing method Rgame.finished_before.
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by RgameController#index as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by RgameController#index as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction

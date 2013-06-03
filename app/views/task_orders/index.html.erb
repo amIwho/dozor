@@ -8,6 +8,7 @@
   <tr>
     <th>Задание</th>
     <th>Порядковый номер</th>
+    <th>Решено</th>
     <th></th>
   </tr>
 
@@ -15,16 +16,17 @@
   <tr>
     <td><%= Task.find(task_order.task_id).name %></td>
     <td><%= task_order.order_n %></td>
+    <td><%= task_order.solved %></td>
     <td>
 	<%= link_to 'Show', task_order %><br />
 	<%= link_to 'Edit', edit_task_order_path(task_order) %><br />
 	<%= link_to 'Destroy', task_order, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</td>
+	<%= link_to 'Up', task_order, method: :up %>
+    </td>
   </tr>
 <% end %>
 </table>
 <% end %>
 <br />
-
 
 <%= link_to 'New Task order', new_task_order_path %>

@@ -30,6 +30,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="capybara" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="ckeditor" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -43,6 +49,18 @@
     <requirement>
       <requirement>
         <dependency name="execjs" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="factory_girl_rails" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="guard-rspec" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -72,7 +90,7 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rspec" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+        <dependency name="rspec-rails" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -128,7 +146,6 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.2.13, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/activesupport-3.2.13)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v3.2.13, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/actionmailer-3.2.13)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mime-types (v1.23, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/mime-types-1.23)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.13.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rspec-2.13.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] acts_as_list (v0.2.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/acts_as_list-0.2.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] bcrypt-ruby (v3.0.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/bcrypt-ruby-3.0.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] coffee-rails (v3.2.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/coffee-rails-3.2.2)" level="application" />
@@ -149,6 +166,10 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] hirb (v0.7.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/hirb-0.7.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] wirble (v0.1.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/wirble-0.1.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] awesome_print (v1.1.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/awesome_print-1.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] therubyracer (v0.11.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/therubyracer-0.11.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] ref (v1.0.5, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/ref-1.0.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] libv8 (v3.11.8.17, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/libv8-3.11.8.17-x86_64-darwin-12)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-rails (v2.13.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rspec-rails-2.13.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] diff-lcs (v1.2.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/diff-lcs-1.2.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-test (v0.6.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rack-test-0.6.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-cache (v1.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rack-cache-1.2)" level="application" />
@@ -170,9 +191,25 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] climate_control (v0.0.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/climate_control-0.0.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] sprockets (v2.2.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/sprockets-2.2.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] polyglot (v0.3.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/polyglot-0.3.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] therubyracer (v0.11.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/therubyracer-0.11.4)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] ref (v1.0.5, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/ref-1.0.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] libv8 (v3.11.8.17, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/libv8-3.11.8.17-x86_64-darwin-12)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] factory_girl_rails (v4.2.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/factory_girl_rails-4.2.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] guard-rspec (v3.0.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/guard-rspec-3.0.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] capybara (v2.1.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/capybara-2.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] guard (v1.8.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/guard-1.8.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] ffi (v1.8.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/ffi-1.8.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.13.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rspec-2.13.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] xpath (v2.0.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/xpath-2.0.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rb-kqueue (v0.2.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rb-kqueue-0.2.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] coderay (v1.0.9, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/coderay-1.0.9)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] lumberjack (v1.0.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/lumberjack-1.0.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] pry (v0.9.12.2, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/pry-0.9.12.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] factory_girl (v4.2.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/factory_girl-4.2.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rb-fsevent (v0.9.3, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rb-fsevent-0.9.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] formatador (v0.2.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/formatador-0.2.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] slop (v3.4.5, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/slop-3.4.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] listen (v1.1.4, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/listen-1.1.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] method_source (v0.8.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/method_source-0.8.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rb-inotify (v0.9.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rb-inotify-0.9.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.5.9, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/nokogiri-1.5.9)" level="application" />
   </component>
 </module>
 

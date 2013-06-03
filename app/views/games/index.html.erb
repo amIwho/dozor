@@ -2,46 +2,6 @@
 
 
 
-<h1>Listing games</h1>
-
-<table>
-  <tr>
-    <th>Игра в работе</th>
-    <th>Название</th>
-    <th>Время начала</th>
-    <th>Легенда</th>
-    <th>Автор</th>
-    <th>Границы</th>
-    <th>Доп. принадлежности</th>
-	<th>Задания<th>
-    <th>Комментарии</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @games.each do |game| %>
-  <tr>
-    <td><% if game.current %>
-		&#10004;
-	<% end %></td>
-    <td><%= game.name %></td>
-    <td><%= game.date.strftime('%e %B %Y в %H:%M') %></td>
-    <td><%= link_to (raw truncate(game.legend)), game %></td>
-    <td><%= game.author %></td>
-    <td><%= game.area %></td>
-    <td><%= raw truncate(game.equipment) %></td>
-	<td><% game.tasks.map {|t| %>	
-	<%= link_to t.name, t %><br /><br />
-	<% } %></td>
-    <td><%= raw truncate(game.coments) %></td>
-    <td><%= link_to 'Show', game %><br />
-    <%= link_to 'Edit', edit_game_path(game) %><br />
-    <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
 <br />
 
 <%= link_to 'New Game', new_game_path %>

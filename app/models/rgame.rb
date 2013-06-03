@@ -23,5 +23,6 @@ class Rgame < ActiveRecord::Base
   scope :finished, :conditions => ['finished_at IS NOT NULL'], :order => 'finished_at ASC'
   scope :finished_before, lambda { |time| { :conditions => ['finished_at < ?', time] } }
     serialize :answered_questions
-  
+  scope :of_game, lambda {|game| { :conditions => { :game_id => game.id } } }
+
 end

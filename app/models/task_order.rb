@@ -26,8 +26,6 @@ class TaskOrder < ActiveRecord::Base
   
   acts_as_list :scope => 'team_id=#{team_id} and game_id=#{game_id}', :column => :order_n
 
-  
-
   validates :task_id, uniqueness: {scope: :team_id }
  # validates :task_id, uniqueness: {scope: [ :order_n, :team_id] }
  # validates :team_id, uniqueness: {:scope => :order_n}

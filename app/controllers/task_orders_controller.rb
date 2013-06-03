@@ -94,12 +94,15 @@ class TaskOrdersController < ApplicationController
         @task_order = TaskOrder.find(id)
         
         @task_order.update_attributes(order_n: order_n)
-          
-          
-          
+
       end
     end
-  
   end
+
+  def up
+    # TODO: Move row lower
+  end
+
+
   
 end

@@ -80,23 +80,26 @@ class GamesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  
+
+
   def end_game
 	@game = Game.find(params[:game_id])
     @game.finish_game!
-    rgame = Rgame.of_game(@game)
-    rgame.each do |rgame|
-      rgame.end!
-    end
     redirect_to games_path
   end
   
   def reuse_game
-	@game = Game.find(params[:game_id])
+	  @game = Game.find(params[:game_id])
     @game.update_attribute(:finished_at, nil)
-    rgame = Rgame.of_game(@game)
+    Game.all.each do |g|
+      g.update_attribute(:current, 0)
+    end
+    @game.update_attribute(:current, 1)
     redirect_to games_path
+  end
+
+  def archivate
+    # TODO: make games archiveable
   end
   
   

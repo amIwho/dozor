@@ -39,6 +39,7 @@ class Game < ActiveRecord::Base
 
   def finish_game!
     self.finished_at = Time.now
+    self.current = 0
     self.save!
   end
 
