@@ -2,7 +2,6 @@ Dozor::Application.routes.draw do
 
   get "stat/:game_id" => "rgame#stat"
 
-  post "task_orders/:taskorder_id" => 'task_orders#up'
 
   get "admin" => "admin#index"
   
@@ -24,6 +23,10 @@ Dozor::Application.routes.draw do
   get '/games/reuse_game/:game_id' => 'games#reuse_game'
 
   resources :task_orders do 
+    member do
+      get "up" => 'task_orders#up', as: :up
+      get "down" => 'task_orders#down', as: :down
+    end
 	collection do
 		put :change_order
 	end
