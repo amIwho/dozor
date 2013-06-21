@@ -18,10 +18,11 @@
     <td><%= task_order.order_n %></td>
     <td><%= task_order.solved %></td>
     <td>
-	<%= link_to 'Show', task_order %><br />
-	<%= link_to 'Edit', edit_task_order_path(task_order) %><br />
-	<%= link_to 'Destroy', task_order, method: :delete, data: { confirm: 'Are you sure?' } %>
-	<%= link_to 'Up', task_order, method: :up %>
+	<%= link_to 'Show', task_order %> |||
+	<%= link_to 'Edit', edit_task_order_path(task_order) %> ||| 
+	<%= link_to 'Destroy', task_order, method: :delete, data: { confirm: 'Are you sure?' } %> |||
+	<%= link_to 'Up', task_order, method: :up, taskorder_id: task_order %> |||
+	<%= link_to 'Down', task_order, method: :down, taskorder_id: task_order %>
     </td>
   </tr>
 <% end %>

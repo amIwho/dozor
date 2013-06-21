@@ -210,6 +210,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] method_source (v0.8.1, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/method_source-0.8.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rb-inotify (v0.9.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/rb-inotify-0.9.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.5.9, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/nokogiri-1.5.9)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jquery-rails (v3.0.0, /Volumes/Untitled/.rvm/gems/ruby-2.0.0-p0/gems/jquery-rails-3.0.0)" level="application" />
   </component>
 </module>
 

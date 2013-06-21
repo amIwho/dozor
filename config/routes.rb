@@ -2,7 +2,7 @@ Dozor::Application.routes.draw do
 
   get "stat/:game_id" => "rgame#stat"
 
-  get "task_orders/index_all"
+  post "task_orders/:taskorder_id" => 'task_orders#up'
 
   get "admin" => "admin#index"
   

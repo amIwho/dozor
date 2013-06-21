@@ -100,9 +100,18 @@ class TaskOrdersController < ApplicationController
   end
 
   def up
+    @task_order = TaskOrder.find(params[:taskorder_id])
+    @task_order.move_higher
+    redirect_to task_orders_path, notice: 'Task order was successfully updated.'
     # TODO: Move row lower
   end
 
+  def down
+    @task_order = TaskOrder.find(params[:taskorder_id])
+    @task_order.move_lower
+    redirect_to task_orders_path, notice: 'Task order was successfully updated.'
+    # TODO: Move row upper
+  end
 
   
 end
