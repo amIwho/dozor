@@ -29,3 +29,4 @@ gem 'acts_as_list'
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'puma'
